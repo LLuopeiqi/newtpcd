@@ -1,5 +1,5 @@
 # Bug Detection Database
-## About newtpcd.sql
+## About tpcd.sql
 + The newtpcd.sql file is the database initialization script used for bug detection in this project.
 + It contains the necessary table structures and sample data to replicate issues and verify fixes during development and testing.
 ## How to Use newtpcd.sql
@@ -32,3 +32,19 @@ It contains the structure of all tables, including their definitions such as col
 ### Important Notes
 + schema.sql is generated from newtpcd.sql and reflects its table structure.
 + For a fully functional database with data, use newtpcd.sql instead.
+# 如何使用tpcd.sql
+## MySQL
+首先创建对应数据库: `create database tpcd;`
+随后在命令行 进行导入 : mysql -u root -p tpcd < tpcd_back.sql
+## TiDB
+进入数据库 : mysql --comments --host 127.0.0.1 --port 4000 -u root -p
+启动后,先设置新的用户名密码 : SET PASSWORD FOR 'root'@'%' = 'your_password';
+创建数据库 : create database tpcd;
+导入数据 mysql -h 127.0.0.1 -P 4000 -u root -p tpcd < tpcd.sql
+## MariaDB
+启动数据库以后:
+首先创建对应数据库: `create database tpcd;`
+随后在命令行 进行导入: mariadb -u root -p tpcd < tpcd.sql 
+## OceanBase
+首次登录以后,创建数据库
+随后导入数据 : source your_path/tpcd.sql
