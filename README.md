@@ -3,48 +3,104 @@
 + The newtpcd.sql file is the database initialization script used for bug detection in this project.
 + It contains the necessary table structures and sample data to replicate issues and verify fixes during development and testing.
 ## How to Use newtpcd.sql
-1、Ensure you have MySQL installed on your system.
+This document provides guidance on using the `tpcd.sql` database file in various database management systems.
 
-2、Import the newtpcd.sql file into your MySQL database:
-  ```mysql -u [username] -p [database_name] < newtpcd.sql```
+---
 
-+ Replace [username] with your MySQL username.
-+ Replace [database_name] with the name of the database you want to import into.
-3、Once imported, the database will include all the necessary tables and data for bug detection.
+### 1. MySQL
 
-## About `schema.sql`
-The `schema.sql` file is an exported schema of the `newtpcd.sql` database.  
-It contains the structure of all tables, including their definitions such as column names, data types, constraints, and relationships.
+#### Steps
 
-### Purpose
-- This file is useful for understanding the database structure without needing to inspect the full database (`newtpcd.sql`) with data.
-- It can also be used to create a fresh instance of the database schema when no data is required.
+1. **Create a database:**
 
-### How to Use `schema.sql`
-1. Ensure you have MySQL installed on your system.
-2. Import the `schema.sql` file into your database:
+   ```sql
+   create database tpcd;
+   ```
+
+2. **Import data:**
+   Run the following command in the terminal:
+
    ```bash
-   mysql -u [username] -p [database_name] < schema.sql
+   mysql -u root -p tpcd < tpcd_back.sql
+   ```
 
-+ Replace [username] with your MySQL username.
-+ Replace [database_name] with the name of the database where you want to apply the schema.
-+ This will create the database tables and relationships without inserting any data.
-### Important Notes
-+ schema.sql is generated from newtpcd.sql and reflects its table structure.
-+ For a fully functional database with data, use newtpcd.sql instead.
-# 如何使用tpcd.sql
-## MySQL
-首先创建对应数据库: `create database tpcd;`
-随后在命令行 进行导入 : mysql -u root -p tpcd < tpcd_back.sql
-## TiDB
-进入数据库 : mysql --comments --host 127.0.0.1 --port 4000 -u root -p
-启动后,先设置新的用户名密码 : SET PASSWORD FOR 'root'@'%' = 'your_password';
-创建数据库 : create database tpcd;
-导入数据 mysql -h 127.0.0.1 -P 4000 -u root -p tpcd < tpcd.sql
-## MariaDB
-启动数据库以后:
-首先创建对应数据库: `create database tpcd;`
-随后在命令行 进行导入: mariadb -u root -p tpcd < tpcd.sql 
-## OceanBase
-首次登录以后,创建数据库
-随后导入数据 : source your_path/tpcd.sql
+---
+
+### 2. TiDB
+
+#### Steps
+
+1. **Access the database:**
+   Run the following command in the terminal:
+
+   ```bash
+   mysql --comments --host 127.0.0.1 --port 4000 -u root -p
+   ```
+
+2. **Set username and password:**
+   After connecting, execute the following command (replace `your_password` with your desired password):
+
+   ```sql
+   SET PASSWORD FOR 'root'@'%' = 'your_password';
+   ```
+
+3. **Create a database:**
+
+   ```sql
+   create database tpcd;
+   ```
+
+4. **Import data:**
+   Run the following command in the terminal:
+
+   ```bash
+   mysql -h 127.0.0.1 -P 4000 -u root -p tpcd < tpcd.sql
+   ```
+
+---
+
+### 3. MariaDB
+
+#### Steps
+
+1. **After starting the database, create a database:**
+
+   ```sql
+   create database tpcd;
+   ```
+
+2. **Import data:**
+   Run the following command in the terminal:
+
+   ```bash
+   mariadb -u root -p tpcd < tpcd.sql
+   ```
+
+---
+
+### 4. OceanBase
+
+#### Steps
+
+1. **After the initial login, create a database:**
+   Log in to the OceanBase client and execute the following command:
+
+   ```sql
+   create database tpcd;
+   ```
+
+2. **Import data:**
+   Use the `source` command to import the data (replace `your_path` with the actual path to the file):
+
+   ```sql
+   source your_path/tpcd.sql;
+   ```
+
+---
+
+### Notes
+
+- Ensure you have sufficient permissions to perform the import.
+- Verify that the `tpcd.sql` file path is correct.
+
+
