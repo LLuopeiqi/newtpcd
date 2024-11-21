@@ -1,3 +1,4 @@
+This page lists all bug reports that we created for MySQL, MariaDB, TiDB and OceanBase.
 # mysql
 **1. Issues with the combination of CASE and DATE.**
 
