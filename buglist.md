@@ -117,6 +117,7 @@ Link:[bugtracker](https://github.com/pingcap/docs/issues/19473)
 Severity:
 
 State:
+
 **2.Issues with CASE operation**
 
 Link:[bugtracker](https://github.com/pingcap/docs/issues/19474)
