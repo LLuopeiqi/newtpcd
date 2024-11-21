@@ -58,6 +58,7 @@ Links: [bugtracker](https://bugs.mysql.com/bug.php?id=116727)
 Severity:	S1 (Critical)
 
 State:Verified
+
 **9. Issues with the EXCEPT operator.**
 
 Links: [bugtracker](https://bugs.mysql.com/bug.php?id=116728)
