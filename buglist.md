@@ -138,7 +138,7 @@ State:
 
 
 
-**4.Issues with EXIt function**
+**4.Issues with EXIT function**
 
 Link: [bugtracker](https://github.com/pingcap/docs/issues/19476)
 
@@ -148,9 +148,9 @@ State:
 
 
 
-**5.Issues with EXIt function**
+**5.Issues with EXCEPT function**
 
-Link: [bugtracker](https://github.com/pingcap/docs/issues/19476)
+Link: [bugtracker](https://github.com/pingcap/docs/issues/19477)
 
 Severity:
 
@@ -158,9 +158,9 @@ State:
 
 
 
-**6.Issues with EXIt function**
+**6.Issues with COALESCE function**
 
-Link:[bugtracker](https://github.com/pingcap/docs/issues/19476)
+Link:[bugtracker](https://github.com/pingcap/docs/issues/19478)
 
 Severity:
 
