@@ -1,5 +1,5 @@
 This page lists all bug reports that we created for MySQL, MariaDB, TiDB and OceanBase.
-# mysql
+# MySQL
 **1. Issues with the combination of CASE and DATE.**
 
 Links: [bugtracker](https://bugs.mysql.com/bug.php?id=116720)
@@ -71,7 +71,7 @@ Links: [bugtracker](https://bugs.mysql.com/bug.php?id=116728)
 Severity:	S1 (Critical)
 
 State:Verified
-# mariaDB
+# MariaDB
 **1.The issue with combining COALESCE and DATE function**
 
 
